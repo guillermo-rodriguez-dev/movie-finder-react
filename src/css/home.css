@@ -1,0 +1,441 @@
+.navbar {
+  background-color: #2791C2;
+  display: grid;
+  height: 5.6rem;
+  grid-template-columns: auto auto auto auto;
+  padding: 1.375em 2.5em;
+  position: sticky;
+  top: 0;
+}
+
+.app-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin: auto;
+}
+
+.app-name strong {
+  font-weight: 900;
+}
+
+.app-name i {
+  font-weight: 400;
+}
+
+.searchbar-container {
+  margin: auto;
+  height: 2.875rem;
+  width: 15.25em;
+  background-color: white;
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: start;
+}
+
+.searchbar-container:focus-within {
+  outline: solid 0.2rem #2ab9fd;
+}
+
+.searchbar-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0.75em;
+}
+
+.searchbar-input {
+  border-style: none;
+  height: 100%;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 0.81rem;
+  color: black;
+}
+
+.searchbar-input:focus {
+  outline: none;
+}
+
+.search-resulta-container {
+  background-color: white;
+  grid-column: 1/3;
+  list-style: none;
+}
+
+.search-resulta-container li {
+  color: black;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-items: start;
+  font-size: 1rem;
+}
+
+.search-resulta-container li img {
+  height: 5rem;
+  width: 5rem;
+  padding: 0.3em;
+}
+
+.log-out-buttom {
+  background-color: transparent;
+  border-style: none;
+  font-size: 0.75rem;
+  color: white;
+  margin: auto;
+}
+
+.profile-image {
+  width: 2.8125em;
+  height: 2.8125em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media only screen and (min-width: 834px) {
+  .navbar {
+    padding: 1.375em 1.875em;
+  }
+
+  .searchbar-container {
+    width: 24.125em;
+    grid-template-columns: auto 1fr;
+  }
+
+  .searchbar-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.75em;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navbar {
+    padding: 1.375em 6.25em;
+  }
+}
+
+.most-watched-movies-container {
+  background-color: #1E1E1E;
+  padding: 3.125em 0 15.625em 0;
+  display: grid;
+  row-gap: 3.125em;
+  justify-content: center;
+}
+
+.most-watched-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3.125em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.movie {
+  background: linear-gradient(to top, #000000 20%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 38.75em;
+  width: 28.0625em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+  justify-content: end;
+  padding: 0 3.125em 1.875em 3.125em;
+}
+
+.movie:hover {
+  box-shadow: 0 0 15px white;
+}
+
+.loader {
+  width: 5em;
+  height: 5em;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.most-watched-movie-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  align-self: end;
+  vertical-align: top;
+  line-height: 4em;
+}
+
+.rating-start--small {
+  color: #FF9900;
+  height: 0.8125em;
+  width: 0.8125em;
+  padding: 0.9375em 0.375em 1.25em 0;
+}
+
+.most-watched-movie-description {
+  size: 1em;
+  font-weight: 400;
+  line-height: 1.25em;
+}
+
+.switch-container {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .most-watched-movies-container {
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+    padding-top: 0.75em;
+    padding-bottom: 9.375em;
+    width: 100%;
+  }
+
+  .most-watched-title {
+    grid-column: 1/3;
+    margin-block-start: 0em;
+  }
+
+  .movie {
+    width: 14.0625em;
+    height: 19.3125em;
+    padding: 0 1.3125em 1.3125em 1.3125em;
+  }
+
+  .movie-full-size {
+    grid-column: 1/4;
+    width: 44.9375em;
+    height: 19.375em;
+  }
+
+  .most-watched-movie-title {
+    font-size: 1.5rem;
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    line-height: 25px;
+  }
+
+  .most-watched-movie-description {
+    font-size: 0.625rem;
+    line-height: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .rating-start--small {
+    color: #FF9900;
+    height: 0.5625em;
+    width: 0.5625em;
+    padding: 0.9375em 0.25em 1.25em 0;
+  }
+
+  .switch-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: end;
+    align-items: center;
+    column-gap: 0.8125em;
+  }
+
+  .multicard-switch {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+  }
+
+  .one-card-icon {
+    padding: 0.375em;
+  }
+
+  .multicard-card-icon {
+    padding: 0.375em;
+
+  }
+
+  .switch-selected {
+    background-color: #373737;
+    border-radius: 3px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .most-watched-movies-container {
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    column-gap: 60px;
+    justify-content: center;
+    padding-top: 0.75em;
+    padding-left: 1.25em;
+    padding-bottom: 9.375em;
+  }
+
+  .movie {
+    height: 27.5em;
+    width: 20em;
+    padding: 0 1.875em 1.875em 1.875em;
+  }
+
+  .movie-full-size {
+    grid-column: 1/4;
+    width: 63.875em;
+    height: 27.5em;
+  }
+}
+
+.blue-button {
+  border-radius: 93px;
+  background-color: #2791C2;
+  border-style: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.blue-button:hover {
+  background-color: #4FC7FF;
+}
+
+.blue-button:visited {
+  background-color: #4FC7FF;
+}
+
+.blue-button:active {
+  background-color: #FFFFFF;
+  color: #2791C2;
+}
+
+.blue-button:focus {
+  outline: 2px solid #82CAFF;
+}
+
+@media only screen and (min-width: 834px) {
+  .blue-button {
+    width: 15.625em;
+    height: 3.75em;
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .blue-button {
+    width: 16.3125em;
+    height: 3.4375em;
+    font-size: 0.9375em;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+.body-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.main-container {
+  display: grid;
+  height: 53.125em;
+  padding: 9.5em 5.9375em;
+  background: linear-gradient(to bottom, #080E20 0%, transparent, rgba(15, 24, 54, 0.4) 100%), url(../images/avatar.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gender-label {
+  font-size: 1.5rem;
+  color: #0FEFFD;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  align-self: center;
+}
+
+.rating-start {
+  color: #FF9900;
+  height: 1.375em;
+  width: 1.375em;
+  display: inline;
+}
+
+.rating-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: start;
+  column-gap: 0.75em;
+}
+
+.movie-title {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+.main-description-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 834px) {
+  .main-container {
+    height: 34.375em;
+    padding: 5.5625em 7.8125em 5.5625em 6.5em;
+    width: 100%;
+  }
+
+  .gender-label {
+    font-size: 0.875rem;
+  }
+
+  .rating-start {
+    height: 0.8125em;
+    width: 0.8125em;
+  }
+
+  .rating-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: start;
+    column-gap: 0.75em;
+  }
+
+  .main-description-text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main-container {
+    padding: 5.5625em 0 5.5625em 11.25em;
+  }
+
+  .main-description-text {
+    max-width: 37.8125em;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
