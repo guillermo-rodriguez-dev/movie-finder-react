@@ -11,7 +11,7 @@ import { useAuth } from '../hooks/useAuth';
 import apiconnection from '../js/apiconnection';
 import '../css/home.css'
 
-
+//this class contains the home page navbar
 export default function Navbar({ logOut, onSearchMovie }) {
 
 

@@ -11,8 +11,6 @@ import backwardsSlash from '../images/backwardsSlash.svg'
 import '../css/modal.css'
 export default function Modal({ movie, show, onModalClose }) {
 
-    // let trailerLink;
-    // let similarMovies;
 
     const [trailerLink, setTrailerLink] = useState('')
     const [similarMovies, setSimilarMovies] = useState(null)
@@ -47,7 +45,7 @@ export default function Modal({ movie, show, onModalClose }) {
                     <img className="more-movies-icon" src={forwardSlash} />
                     <img className="more-movies-icon" src={backwardsSlash} />
                 </div>
-                <button className="blue-button buttom-container" id="play-trailer-button" onClick={onPlayClick}>Play Trailer</button>
+                <button aria-label='Play Trailer Button' className="blue-button buttom-container" id="play-trailer-button" onClick={onPlayClick}>Play Trailer</button>
                 <h1 className="movie-title" id="movie-details-title">{movie.title}</h1>
                 <p className="description" id="modal-movie-description">
                     {movie.overview}

@@ -3,7 +3,7 @@ import constants from "../js/constants";
 
 
 
-
+//this function contains api conections functionalities
 export const useApi = ({}) => {
     const getMoviesFromApi = (page = 1) => {
         let data

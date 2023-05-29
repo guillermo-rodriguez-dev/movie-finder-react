@@ -1,11 +1,10 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import Header from '../components/Header'
+import React, {useRef, useState } from 'react'
+import LoginHeader from '../components/LoginHeader'
 import '../css/login.css'
 import eye from '../images/eye.png'
 import facebookIcon from '../images/facebook-icon.png'
 import twitterIcon from '../images/twitter-icon.png'
 import googleIcon from '../images/google-icon.png'
-import login from '../js/login'
 import { useAuth } from '../hooks/useAuth'
 export default function Login() {
 
@@ -27,7 +26,7 @@ export default function Login() {
 
     return (
         <div className="main-container-login" id="login-body">
-            <Header />
+            <LoginHeader />
             <div className="login-card">
                 <h2 className="login-card__title">Welcome! Log in or Register</h2>
                 <h3 className="login-card__subtitle">Log in to find the movies you're looking for!</h3>

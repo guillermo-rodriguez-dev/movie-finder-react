@@ -1,5 +1,8 @@
 import constants from "./constants.js";
 
+//this js file contains the methods for api conection
+
+
 const getMoviesFromApi = async(page = 1) => {
     let data
     let response = await fetch(`${constants.apiBaseUrl}/movie/popular?api_key=${constants.apiKey}&language=en-US&page=${page}`);

@@ -3,11 +3,12 @@
 
 
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import Rating from './Rating'
 import apiconnection from '../js/apiconnection'
-import { useMovies } from '../hooks/useMovies'
 
+
+//this component is the main movie showed in the home page
 export default function MainMovie({ movie }) {
 
     const watchedNowOnClick = async () => {
@@ -19,13 +20,11 @@ export default function MainMovie({ movie }) {
 
 
     return (
-        <main className="main-container" id="main-container" style={
+        <main className="main-container" id="main-container" aria-label='Main Movie Background Image' style={
             {
                 backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover'
-
-
             }
         }>
             <h2 className="gender-label" id="gender">{ movie.genre[0]}</h2>

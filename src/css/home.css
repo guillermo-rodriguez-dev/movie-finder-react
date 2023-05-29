@@ -378,7 +378,7 @@
   display: grid;
   height: 53.125em;
   padding: 9.5em 5.9375em;
-  background: linear-gradient(to bottom, #080E20 0%, transparent, rgba(15, 24, 54, 0.4) 100%), url(../images/avatar.png);
+  background: linear-gradient(to bottom, #080E20 0%, transparent, rgba(15, 24, 54, 0.4) 100%), url(../images/avatar.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }

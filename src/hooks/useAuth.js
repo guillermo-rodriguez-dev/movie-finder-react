@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-
+//this hook contains the authentication methods and variabless
 export const useAuth = (initialState = {}) => {
 
     const [user, setUser] = useState(initialState)

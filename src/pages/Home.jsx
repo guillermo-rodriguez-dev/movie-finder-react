@@ -2,18 +2,11 @@
 
 
 
-import React, { useEffect, useRef, useState } from 'react'
-import Header from '../components/Header'
+import React, { useEffect, useState } from 'react'
 import '../css/home.css'
-import searchIcon from '../images/search-icon.svg'
-import profilePic from '../images/profile.png'
-import rectangle1 from '../images/rectangle.svg'
-import rectangle2 from '../images/rectangle2.svg'
-import { chargeHomePage } from '../js/home'
 import MainMovie from '../components/MainMovie'
 import MostWatched from '../components/MostWatched'
 import { useMovies } from '../hooks/useMovies'
-import apiconnection from '../js/apiconnection'
 import Navbar from '../components/Navbar'
 import Modal from '../components/Modal'
 export default function Home() {
@@ -32,12 +25,12 @@ export default function Home() {
     }
 
     const onHandleScroll = () => {
-        if (window.innerHeight + document.documentElement.scrollTop < document.documentElement.offsetHeight  || loading) {
-        console.log("OnHandleScroll");
-        console.log(loading);
-        console.log(window.innerHeight);
-        console.log(document.documentElement.scrollTop)
-        console.log(document.documentElement.offsetHeight)
+        if (window.innerHeight + document.documentElement.scrollTop < document.documentElement.offsetHeight || loading) {
+            console.log("OnHandleScroll");
+            console.log(loading);
+            console.log(window.innerHeight);
+            console.log(document.documentElement.scrollTop)
+            console.log(document.documentElement.offsetHeight)
             return;
         }
         console.log("OnHandleScroll loading");
@@ -52,16 +45,17 @@ export default function Home() {
 
     }, [loading])
 
-useEffect(() => {
-  
+    useEffect(() => {
 
 
-}, [mostWatchedMovies])
 
-    
+    }, [mostWatchedMovies])
+
+
 
     return (
         <>
+
             {mostWatchedMovie && <Modal movie={movie} show={showModal} onModalClose={onModalClose} />}
             <div id="home-container">
                 <Navbar logOut={logOut} onSearchMovie={searchMoviesByTitle} />

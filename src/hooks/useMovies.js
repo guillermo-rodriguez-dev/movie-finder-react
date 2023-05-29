@@ -2,6 +2,8 @@ import apiconnection from "../js/apiconnection";
 import constants from "../js/constants";
 import { useEffect, useState } from 'react';
 
+
+//this hook contains the movies state
 export const useMovies = () => {
     const [mostWatchedMovie, setMostWatchedMovie] = useState(null);
     const [mostWatchedMovies, setMostWatchedMovies] = useState(null);
