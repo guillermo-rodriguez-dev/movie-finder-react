@@ -15,21 +15,14 @@ export default function Login() {
     const loginForm = useRef(null);
     const auth = useAuth();
     const [showPassword, setShowPassword] = useState(false)
-    const handleRevelPassword = useCallback(() => {
-        setShowPassword(prevShowPassword => !prevShowPassword);
-    }, [])
-
-    useEffect(() => {
-        hideRevelPassword.current.addEventListener("click", handleRevelPassword
-        );
-        loginForm.current.addEventListener("submit", function async(event) {
-            event.preventDefault();
-            console.log("login button clicked");
-            auth.signIn(emailInput.current.value, passwordInput.current.value);
-
-        })
-
-    }, [])
+    const handleRevelPassword = () => {
+        setShowPassword(!showPassword)
+    }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("login button clicked");
+        auth.signIn(emailInput.current.value, passwordInput.current.value);
+    }
 
 
     return (
@@ -38,7 +31,7 @@ export default function Login() {
             <div className="login-card">
                 <h2 className="login-card__title">Welcome! Log in or Register</h2>
                 <h3 className="login-card__subtitle">Log in to find the movies you're looking for!</h3>
-                <form className="login-form" id="loginForm" ref={loginForm}>
+                <form className="login-form" id="loginForm" ref={loginForm} onSubmit={handleSubmit}>
                     <input type="email" className={`text-input ${auth.emailError && 'input-error-state'}`} name="email" id="login-email-input" placeholder="Email" ref={emailInput} />
                     <div className="error-message" id="error-message-email" >
                         {auth.emailError}
@@ -46,7 +39,7 @@ export default function Login() {
                     <div className="password-container" id="password-container">
                         <input type={showPassword ? "text" : "password"} className={`password-input ${auth.passwordError && 'input-error-state'}`} name="password" id="login-password-input" ref={passwordInput}
                             placeholder="Password" />
-                        <img src={eye} id="hide-revel-password" ref={hideRevelPassword} />
+                        <img src={eye} id="hide-revel-password" ref={hideRevelPassword} onClick={handleRevelPassword} />
                     </div>
                     <div className="error-message" id="error-message-password">
                         {auth.passwordError}
@@ -76,8 +69,6 @@ export default function Login() {
                     <img src={googleIcon}></img>Login with Google
                 </button>
             </div>
-
         </div>
-
     )
 }
