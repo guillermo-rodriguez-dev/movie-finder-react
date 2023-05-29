@@ -41,7 +41,7 @@ export default function Modal({ movie, show, onModalClose }) {
             <main className="modal-content-container" id="movie-details-modal-container" style={
                 { 'backgroundImage': `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})` }
             }>
-                <div className="close-icon" id="close-button" onClick={onModalClose}>
+                <div className="close-icon" aria-label='Close Modal Button' id="close-button" onClick={onModalClose}>
                     <img className="more-movies-icon" src={forwardSlash} />
                     <img className="more-movies-icon" src={backwardsSlash} />
                 </div>
